@@ -1,0 +1,47 @@
+{
+    "name": "eventual",
+    "version": "0.0.0",
+
+    "ghc-options": "-Wall -Wincomplete-record-updates -Wincomplete-uni-patterns -threaded",
+
+    "default-extensions": [
+        "ApplicativeDo",
+        "DerivingStrategies",
+        "OverloadedLists",
+        "OverloadedStrings",
+        "TypeApplications"
+    ],
+
+    "dependencies": [
+        "aeson",
+        "base",
+        "brick",
+        "bytestring",
+        "http-client",
+        "http-client-tls",
+        "http-types",
+        "lens",
+        "text",
+        "unix",
+        "vector",
+        "vty"
+    ],
+
+    "library": {
+        "source-dirs": [
+            "library"
+        ]
+    },
+
+    "executables": {
+        "eventual": {
+            "source-dirs": [
+                "executables/eventual"
+            ],
+            "main": "Main.hs",
+            "dependencies": [
+                "eventual"
+            ]
+        }
+    }
+}
